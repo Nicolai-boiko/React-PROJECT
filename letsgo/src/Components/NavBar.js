@@ -33,12 +33,6 @@ const ImgLogo = styled.img`
     width: 50px;
 `;
 
-const Sign = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
 const SignLogo = styled.img`
     width: 32px;
     height: 32px;
@@ -50,7 +44,9 @@ const SignButton = styled.button`
     background: none;
     border: none;
     color: white;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const NavBar = () => (
@@ -59,10 +55,9 @@ export const NavBar = () => (
             <ImgLogo src={logoImg} alt="logo"/>
             <H1>Let's GO Fast Eat</H1>
         </Logo>
-        <Sign>
+        <SignButton>
             <SignLogo src={signImg} alt="sign"/>
-            <SignButton>войти</SignButton>
-        </Sign>
-        
+            войти
+        </SignButton>        
     </NavBarStyled>
 )
